@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_development_dependency "rspec"
-  s.add_runtime_dependency "nestful"
+  s.add_development_dependency "cucumber", "1.1.9"
+  s.add_development_dependency "rspec", "2.7.0"
+  s.add_development_dependency "webmock", "1.8.0"
 end
