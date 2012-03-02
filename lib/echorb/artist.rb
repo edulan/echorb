@@ -1,9 +1,7 @@
-require 'httparty'
+require 'net/http'
 
 module Echorb
   class Artist
-    include HTTParty
-
     attr_reader :id, :name
 
     def initialize id, name
@@ -12,8 +10,12 @@ module Echorb
     end
 
     def self.search name
-      search_url = "http://developer.echonest.com/api/v4/artist/search"
-      result = get(search_url, :query => { :name => name }, :output => "json")
+      search_params = { :name => name }
+      search_uri = URI("http://developer.echonest.com/api/v4/artist/search")
+      search_uri.query = URI.encode_www_form(search_params)
+
+      response = Net::HTTP.get_response(search_uri)
+      result = JSON.parse(response.body)
       result["response"]["artists"]
     end
   end
