@@ -5,10 +5,10 @@ require "echorb/version"
 Gem::Specification.new do |s|
   s.name        = "echorb"
   s.version     = Echorb::VERSION
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Eduardo Lanchares"]
+  s.email       = ["edulanchi@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
+  s.summary     = %q{Ruby Wrapper for Echonest API}
   s.description = %q{TODO: Write a gem description}
 
   s.rubyforge_project = "echorb"
@@ -18,8 +18,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  s.add_development_dependency "cucumber", "1.1.9"
   s.add_development_dependency "rspec", "2.7.0"
   s.add_development_dependency "webmock", "1.8.0"
 end
