@@ -1,10 +1,11 @@
-$:.unshift(File.dirname(__FILE__))
-require 'spec_helper'
+require "spec_helper"
+require "json"
 
 module Echorb
   describe Artist do
     before do
-      @artist = Artist.new 1, "Radiohead"
+      @attrs = {:id => 1, :name => "Radiohead", :familiarity => 0.75}
+      @artist = Artist.new(@attrs)
     end
 
     describe "#id" do
@@ -19,29 +20,17 @@ module Echorb
       end
     end
 
-    describe ".search" do
-      context "with a succeed response" do
-        before do
-          name = "radiohead"
-          url = "http://developer.echonest.com/api/v4/artist/search"
-          params = { :name => name }
-          body = "{\"response\":{\"status\":{\"version\":\"4.2\",\"code\":0,\"message\":\"Success\"},\"artists\":[{\"name\":\"Radiohead\",\"id\":\"ARH6W4X1187B99274F\"}]}}"
+    describe "#familiarity" do
+      it "returns the artist familiarity" do
+        @artist.familiarity.should == 0.75
+      end
+    end
 
-          @request = stub_request(:get, url).
-            with(:query => params).
-            to_return(:headers => { "Content-Type" => "application/json" },
-                       :body => body)
+    describe "#to_json" do
+      it "returns a json representation of the artist" do
+        json_attrs = @attrs.to_json
 
-          @artists = Artist.search name
-        end
-
-        it "searchs for echonest artists" do
-          @request.should have_been_requested
-        end
-
-        it "returns matched artists" do
-          @artists.should have(1).artist
-        end
+        @artist.to_json.should == json_attrs
       end
     end
   end
