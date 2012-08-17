@@ -1,0 +1,10 @@
+{
+    "response": {
+        "status": {
+            "message": "Success", 
+            "code": 0, 
+            "version": "4.2"
+        }, 
+        "ticket": "d298131d5f189c73bd9a8ff706621443"
+    }
+}

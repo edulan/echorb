@@ -1,0 +1,15 @@
+{
+    "response": {
+        "status": {
+            "message": "Success", 
+            "code": 0, 
+            "version": "4.2"
+        }, 
+        "artists": [
+            {
+                "name": "Muse", 
+                "id": "ARR3ONV1187B9A2F59"
+            }
+        ]
+    }
+}

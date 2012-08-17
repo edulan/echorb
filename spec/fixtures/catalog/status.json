@@ -1,0 +1,27 @@
+{
+    "response": {
+        "status": {
+            "message": "Success", 
+            "code": 0, 
+            "version": "4.2"
+        }, 
+        "total_items": 21, 
+        "update_info": [
+            {
+                "item_id": "1", 
+                "info": " lookup failed"
+            }, 
+            {
+                "item_id": "3", 
+                "info": "bad value"
+            }, 
+            {
+                "item_id": "8", 
+                "info": "couldn't resolve item"
+            }
+        ], 
+        "items_updated": 21, 
+        "percent_complete": 100, 
+        "ticket_status": "complete"
+    }
+}

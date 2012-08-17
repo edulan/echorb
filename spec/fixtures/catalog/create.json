@@ -1,0 +1,12 @@
+{
+    "response": {
+        "status": {
+            "code": 0, 
+            "message": "Success", 
+            "version": "4.2"
+        }, 
+        "type": "artist", 
+        "name": "Catalog", 
+        "id": "CAPWAHG1384F8969E9"
+    }
+}
