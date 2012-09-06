@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
   s.email       = ["edulanchi@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Ruby Wrapper for Echonest API}
-  s.description = %q{Ruby Wrapper for Echonest API}
 
   s.rubyforge_project = "echorb"
 
