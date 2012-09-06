@@ -1,3 +1,5 @@
+/echorb.sublime-project
+/echorb.sublime-workspace
 *.gem
 .bundle
 Gemfile.lock
